@@ -1,0 +1,10 @@
+Rewritebase /gestion/*		#url base
+RewriteEngine On		#ocultamos la extension
+RewriteCond %{REQUEST_FILENAME} !-d			#ocultar extension .html
+RewriteCond %{REQUEST_FILENAME}.html -f		#ocultar extension .html
+RewriteRule ^(.*)$ gestion/$1.html
+
+
+RewriteCond %{REQUEST_FILENAME} !-d			#ocultar extension .html
+RewriteCond %{REQUEST_FILENAME}.php -f		#ocultar extension .html
+RewriteRule ^(.*)$ gestion/$1.php
